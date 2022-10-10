@@ -1,0 +1,50 @@
+安装
+"xlsx": "^0.16.4"
+"file-saver": "^2.0.2",
+"script-loader": "^0.7.2",
+
+
+revFinish(){
+          let datas = this.data
+          let that = this;
+        //  if (!datas|| datas.length<=0) {
+        //    that.$message('请先选择要导出的数据！')
+        //    return
+        //  }
+        let times = new Date()
+        let name = times.toLocaleString( )
+        console.log(name)
+         import('@/vendor/Export2Excel').then(excel => {
+           const tHeader = ['时间','区块ID', '推荐人','推荐人电话',  '企业名称', '企业老板'
+             , '企业电话','企业信息','状态'];
+           const filterVal = ['time','token_y', 'adviser', 'adviser_phone', 'company_name', 'boss_name','phone'
+             , 'content', 'status'];
+           const fileName = '6DGS--'+ name;
+           const data = this.formatJson(filterVal, datas)
+           excel.export_json_to_excel({
+             header: tHeader,
+             data,
+             filename: fileName
+           })
+         })
+       },
+       formatJson(filterVal, jsonData) {
+         return jsonData.map(v => filterVal.map(j => {
+           if (j === 'customsClearDate'|| j === 'listDate') {
+             return parseTime(v[j])
+           }else if(j === 'status'){
+            //  debugger
+             if (v[j]==1) {
+               v[j]="待审核";
+             }else if(v[j]==2){
+               v[j]="已通过";
+             }else {
+               v[j]="已拒绝";
+             }
+             return v[j]
+           } else {
+             return v[j]
+           }
+         }))
+       
+        },

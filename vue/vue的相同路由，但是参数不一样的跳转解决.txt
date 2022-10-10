@@ -1,0 +1,33 @@
+相同的路由，不一样的参数的跳转
+
+group_live_gli(){//直播间跳转直播管理页面
+              let chat_sid = localStorage.getItem('chat_sid')
+              console.log(chat_sid);
+              let liveInfo = this.liveinfo
+              if(this.chat_type == 'group_live')
+              {
+                if('shop_id' in liveInfo){
+                  let shopid = liveInfo.shop_id
+                  let chat_shopid = 'msg_' + shopid.split('_')[1]
+                  this.$router.push(`/LiveBroadcast/videoChat/${chat_shopid}`)
+                  // location.reload()
+                  // this.$router.push(`/LiveBroadcast/SuccessBroadcast/${this.$route.params.token_y}`)
+                  console.log('1');
+                }else{
+                  // location. reload()
+                  this.$router.push(`/LiveBroadcast/SuccessBroadcast/${this.$route.params.token_y}`)
+                  console.log('2');
+                }
+              }else
+              {
+                this.$router.push(`/shopBroadcast/SuccessSetShop/${this.$route.params.token_y}`)
+              }
+            },
+
+在watch：{}监听路由变化
+
+watch: {
+          $route (to, from) {
+            this.$router.go(0)
+          },
+}

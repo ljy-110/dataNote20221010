@@ -1,0 +1,43 @@
+在vscode的文件 》首选项 》 用户片段
+
+然后再搜索框输入vue，回车，打开vue.json文件，添加下面这个代码
+
+{
+	"Print to console": {
+			"prefix": "vue",
+			"body": [
+				"<template>",
+				"  <div></div>",
+				"</template>",
+				"",
+				"<script>",
+				"export default {",
+				"  props: {},",
+				"  components: {},",
+				"  data () {",
+				"    return {",
+				"    };",
+				"  },",
+				"",
+				"  created() {},",
+				"",
+				"  methods: {},",
+				"",
+				"  computed: {},",
+				"",
+				"  mounted: {},",
+				"",
+				"  watch: {}",
+				"}",
+				"",
+				"</script>",
+				"<style lang='scss' scoped>",
+				"</style>"
+		],
+			"description": "Log output to console"
+		}
+}
+
+prefix代表的是你在新的vue页面，输入的命令获取模板
+
+新建一个index.vue，输入vue然后回车即可生成代码模块

@@ -1,0 +1,24 @@
+在我们的前端拿到后端返回的数据的时候，需要在el-table的功能，并且在单元格里面加入输入框，为了让输入框的输入时候不会影响到其他的输入框，可以使用@input来获取输入框内容的值
+<el-table>
+	<el-table-column prop="reality_fans" label="输入框" show-overflow-tooltip>
+                <template slot-scope="scope">
+                    <el-input v-model="scope.row.reality_fans" @change="funtion" @input='getNum' placeholder="请输入内容" class="group-inp"></el-input>
+                </template>
+            </el-table-column>
+</el-table>
+
+<script>
+export default {
+	data() {
+        return {
+	getNums:''
+}
+	methods: {
+	getNum(value){
+            this.getNums = value
+        },
+}
+}
+</script>
+
+肯定还会有其他的方法，希望各位大佬可以指出，谢谢

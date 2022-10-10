@@ -1,0 +1,26 @@
+<el-table ref="multipleTable" :data="data" tooltip-effect="dark" border style="width: 100%" @selection-
+          <el-table-column prop="is_ban" label="ÊÇ·ñ" show-overflow-tooltip>
+              <template slot-scope="scope">
+            <span v-if="scope.row.is_ban">ÊÇ</span>
+            <span v-if="!scope.row.is_ban">·ñ</span>
+              </template>
+          </el-table-column>
+    <el-table-column prop="address" label="Í¼Æ¬" show-overflow-tooltip>
+        <template slot-scope="scope">
+      <span class="seeCode" @click="getCodeImg(scope.row.account_id)" style="font-size:14px;color:rgb(22, 155, 213);cursor: pointer;">µã»÷²é¿´Í¼Æ¬</span>
+        </template>               
+    </el-table-column>
+<el-table-column prop="group_name" label="ÊäÈë¿ò" show-overflow-tooltip>
+            <template slot-scope="scope">
+                <el-input v-model="scope.row.group_name" @blur="addName" @input='getName' placeholder="ÇëÊäÈëÄÚÈÝ"  class="group"></el-input>
+            </template>
+          </el-table-column>
+<el-table-column label="×´Ì¬" show-overflow-tooltip>
+                <template slot-scope="scope">
+                    <span v-if="scope.row.status == 0">1</span>
+                    <span v-else-if="scope.row.status == 1">2</span>
+                    <span v-else-if="scope.row.status == 2">3</span>
+                    <span v-else-if="scope.row.status == 3">4</span>
+                </template>
+            </el-table-column>
+<el-table>

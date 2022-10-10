@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+let shopid ='obj_'+chatid.split('_')[1]
+=======
+let shopid ='obj_'+chatid.split('_')[1]
+
+>>>>>>> 8939307 (2022年10月10日2)

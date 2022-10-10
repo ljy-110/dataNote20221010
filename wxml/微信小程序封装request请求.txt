@@ -1,0 +1,110 @@
+开发文档的
+wx.request({
+  url: 'test.php', // 仅为示例，并非真实的接口地址
+  data: {
+    x: '',
+    y: ''
+  },
+  header: {
+    'content-type': 'application/json' // 默认值
+  },
+  success(res) {
+    console.log(res.data)
+  },
+  fail(err){
+    console.log(err)  
+  }
+})
+
+所以我们设置一个全局常量baseUrl用来存储前缀
+
+const baseUrl='https://some-domain.com/api/'
+
+2.method(HTTP 请求方法)
+这里不多做解释
+
+
+const GET = 'GET';
+const POST = 'POST';
+const PUT = 'PUT';
+const FORM = 'FORM';
+const DELETE = 'DELETE';
+
+
+
+3.header(请求header)
+header的话根据method设置就行了,默认
+header = {
+          'content-type': 'application/json',
+ };
+4.data(参数)
+get请求直接传就可以了
+post请求JSON.stringify(data)一下
+
+封装代码
+const GET = 'GET';
+const POST = 'POST';
+const PUT = 'PUT';
+const FORM = 'FORM';
+const DELETE = 'DELETE';
+
+const baseURL = 'https://some-domain.com/api/';
+
+function request(method, url, data) {
+    return new Promise(function(resolve, reject) {
+        let header = {
+            'content-type': 'application/json',
+        };
+        wx.request({
+            url: baseURL + url,
+            method: method,
+            data: method === POST ? JSON.stringify(data) : data,
+            header: header,
+            success(res) {
+                //请求成功
+                //判断状态码---errCode状态根据后端定义来判断
+                if (res.data.errCode == 0) {
+                    resolve(res);
+                } else {
+                    //其他异常
+                    reject('运行时错误,请稍后再试');
+                }
+            },
+            fail(err) {
+                //请求失败
+                reject(err)
+            }
+        })
+    })
+}
+
+使用
+1.在小程序util文件夹下新建api.js,并将上述代码放进去
+然后创建请求,并导出
+//衔接上面代码
+const API = {
+    getOpenid: (data) => request(GET, `jsapi/mini?jsCode=${data}`),
+};
+module.exports = {
+    API: API
+}
+2.这里我么以获取openid接口为例
+在.js文件里引入api.js下的API
+const $api = require('../../utils/api.js').API;
+Page({
+    data: {},
+    onLoad: function (options) {
+        wx.login({
+            success:res=> {
+                // 调用接口获取openid
+                $api.getOpenid(res.code)
+                    .then(res => {
+                       //请求成功
+                    })
+                    .catch(err => {
+                       //请求失败
+                    })
+            }
+        })
+    }
+})

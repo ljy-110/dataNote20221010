@@ -1,0 +1,95 @@
+<el-form :inline="true" :model="formInline" ref="formInline" class="demo-form-inline" size="mini" style="padding-right:10px;padding-left:10px;padding-top:20px;">
+<el-form-item label="参数:" prop="bacth">
+                    <el-input v-model="formInline.bacth" placeholder="内容"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-upload
+                        class="upload-demo upload-flex"
+                        ref="upload"
+                        action="#"
+                        :on-preview="handlePreview"
+                        :on-remove="handleRemove"
+                        :http-request="httpRequest"
+                        :file-list="fileList"
+                        :on-success="handSuccess"
+                        :on-change="handleChange"
+                        :on-exceed='handleExceed'
+                        :before-remove='beforeRemove'
+                        :data="getUploadList"
+                        :auto-upload="false"
+                        accept=".txt"
+                        :limit="1">
+                        <el-button slot="trigger" size="mini" type="primary">选择文件</el-button>
+                        <el-button style="margin-left: 10px;" size="mini" type="success" @click="submitUpload">上传新数据</el-button>
+                        <div slot="tip" class="el-upload__tip">只能上传txt文件</div>
+                    </el-upload>
+                </el-form-item>
+            </el-form>
+
+<script>
+export default {
+	data() {
+        return {
+	getNums:''
+}
+	methods: {
+	getNum(value){
+            this.getNums = value
+        },
+submitUpload(data) {//点击上传
+            this.$refs.upload.submit(data);
+        },
+        handleChange(file, fileList) {//上传文件变化时
+            this.fileList = fileList
+        },
+        async httpRequest(param){
+            let file = param.file // 相当于input里取得的files
+            let batch_name = this.formInline.bacth
+            // console.log(file)
+            let formData = new FormData()// FormData 对象
+            formData.append('file', file)// 文件对象
+            formData.append('batch_name', batch_name)
+            let that = this;
+            that.$axios({
+                method: 'POST',
+                url: url, 
+                headers:{'Content-Type': 'multipart/form-data'},
+                data: formData
+            }).then((response) => {
+                // console.log(response)
+                if(response.data.ret) {
+                    this.getBatchList();
+                    this.$message.success('上传成功')
+                    this.chuliShow = false
+                }else{
+                    this.$message.error(response.data.msg+'失败')
+                    this.chuliShow = false
+                }
+            })
+            .catch((e) => {
+                this.$message.error('上传失败')
+                this.chuliShow = false
+            })
+            
+        },
+        handSuccess(response, file, fileList){//上传成功提示并且清除列表
+            this.chuliShow = true
+            this.$refs.upload.clearFiles();
+            this.formInline.bacth=''
+            // console.log(response, file, fileList);
+        },
+        handleRemove(file, fileList) {//文件移除的
+            // console.log(file, fileList);
+        },
+        handlePreview(file) {//点击上传文件的时候的
+            // console.log(file);
+        },
+        handleExceed(files, fileList) {//文件限制超个数
+            this.$message.warning(`当前限制选择 1 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
+        },
+        beforeRemove(file, fileList) {//删除
+            return this.$confirm(`确定移除 ${ file.name }？`);
+        },
+}
+}
+</script>

@@ -1,0 +1,42 @@
+当我们使用vue开发时经常会遇到当vue实例已经创建好了，有时候需要再次给数据赋值时，并不能在视图中改变
+在vue文档中写着如果在实例创建之后添加新的属性到实例上，它不会触发视图更新
+因此比如我们修改一个数组其中的一个值，或者添加一条数据时，不管用。
+
+this.#set(obj, key, value)
+我们在项目开发的过程中，经常会遇到这种情况：为data中的某一个对象添加一个属性
+
+Vue.set() 方法
+参数1： 要修改的对象
+参数2： 属性
+参数3： 属性的值是啥
+返回值：已经修改好的值
+
+有三种方法可以实现，分别是Vue.set, vm.$set, replace
+
+Vue.set(this.data,'number',data.selectedNum)
+
+var vm =new Vue({
+	el:'#app',
+	data:{
+		items:['a', 'b', 'c']
+	},
+	methods:{
+		btn(){
+			Vue.set(this.items, 1, 'e')
+			console.log(this.items)
+		}
+	}
+})
+
+ var vm =new Vue({
+	el:'#app',
+	data:{
+		items:['a', 'b', 'c']
+	},
+	methods:{
+		btn(){
+			this.$set(this.items, 1, 'e')
+			console.log(this.items)
+		}
+	}
+})

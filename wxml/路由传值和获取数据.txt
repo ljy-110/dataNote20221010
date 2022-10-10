@@ -1,0 +1,65 @@
+一、url传值
+
+详细的配置参数可以查看组件导航：navigator,这里不再做过多的解释。
+1. 正向传值：A界面 –>B界面
+
+用 navigator标签或 wx.navigator传值，A界面向B界面传id值
+
+A界面获取id值传向B界面如果需要传多个参数, 用 & 链接即可
+
+// 方法一：navigator标签传值
+  <navigator url="/page/index/index?id=110" >传值</navigator>
+  <navigator url="/page/index/index?id=110&username=jane&password=123456" >传值</navigator>
+
+  // 方法二： wx.navigator标签传值单值、多值传递
+  wx.navigateTo({
+   url: '/page/index/index?id=' + id
+  })
+
+  wx.navigateTo({
+   url: '/page/index/index?id=' + id +'&username='+ username+'&password='+ password
+  })
+
+B界面接受id值
+ /**
+ * 生命周期函数--监听页面加载
+ */
+ onLoad: function (options) {
+  var id = options.id;
+  this.setData({
+   id:id,
+   username:username,
+   password:password,
+  })
+ },
+反向传值：B界面 –>A界面
+
+在B界面需要传值地方代码如下
+ var pages = getCurrentPages() // 获取栈中全部界面的, 然后把数据写入相应界面
+  var currentPage = pages[pages.length - 1] //当前界面
+  var prePage = pages[pages.length - 2] //上一个界面
+  var that = this
+  prePage.setData({
+   id: that.data.id,
+  })
+在A界面需要接受B界面传过来值码如下：这里要在onShow方法里面重新调用你的数据请求或是，为了验证是否传值成功，你可以打印验证 注：由于你从B界面返回A界面使用了wx.navigateBack，所以当你回到A界面后onLoad、onReady方法不响应，onShow方法响应，所以这里你需要特别注意--生命周期
+  /**
+  * 生命周期函数--监听页面显示
+  */
+  onShow: function () {
+   //获取数据 
+   this.gainData() 
+   // 打印你的传值
+   console.log("res==", this.data.res)
+  },
+但是其实返回上一个页面使用的是
+wx.navigateBack({
+          delta: 1
+        })
+
+在
+onShow: function () {
+   //获取数据 
+   this.gainData() 
+  },
+可以刷新页面的数据

@@ -1,0 +1,73 @@
+在 utils 文件夹下添加 request.js 文件，添加如下代码
+
+var app = getApp(); //获取小程序全局唯一app实例
+var host = '******************'; //接口地址
+ 
+//url：接口
+//postData：参数
+//doSuccess：成功的回调函数
+//doFail：失败的回调函数
+ 
+//POST请求
+function post(url, postData, doSuccess, doFail) {
+  request(url, postData, "POST", doSuccess, doFail);
+}
+ 
+//GET请求
+function get(url, postData, doSuccess, doFail) {
+  request(url, postData, "GET", doSuccess, doFail);
+}
+ 
+function request(url, postData, method, doSuccess, doFail) {
+  wx.showLoading({
+    title: "正在加载中...",
+  })
+  wx.request({
+    url: host + url, //请求地址
+    method: method, //请求方法
+    header: { //请求头
+      "Content-Type": "application/json;charset=UTF-8"
+    },
+    data: postData, //请求参数    
+    dataType: 'json', //返回数据格式
+    responseType: 'text', //响应的数据类型
+    success: function(res) {
+      wx.hideLoading();
+      //成功执行方法，参数值为res.data,直接将返回的数据传入
+      doSuccess(res.data);
+    },
+    fail: function() {
+      //失败执行方法
+      doFail();
+    },
+  })
+}
+//module.exports用来导出代码
+//js文件中通过var http = require("../../util/request.js")加载
+module.exports = {
+  postRequest: post,
+  getRequest: get,
+}
+
+tips：请求头 header 默认为 application/json ，如果设置不校验合法域名、web-view（业务域名）、TLS版本以及HTTPS证书，需修改请求头 header为HTTP请求头： application/x-www-form-urlencoded，否则post请求时将会报错，正式开发环境中可忽略，直接使用默认请求头 application/json
+
+2、调用方法
+2.1 .js文件中引入request.js文件
+var http = require('../../utils/request.js'); //相对路径
+tips：注意路径正确与否，若请求报错可考虑是路径问题
+
+2.2 调用请求方法（post请求为例）
+var params = {//请求参数
+  aid: this.optionaid, //id
+  aname: this.data.receiving, //收货人
+  atell: this.data.tell, //联系方式
+  adetailed: this.data.detailed, //详细地址
+}
+http.postRequest("EditAddress/EditAddressInfo", params, function(res) {
+  console.log("修改成功！");
+  wx.navigateTo({
+    url: '/pages/address/address',
+  })
+}, function(res) {
+  console.log("修改失败！！！")
+})

@@ -1,0 +1,70 @@
+<template>
+    <div class="box">
+        <h3 style="text-align: center;">微微派单管理系统</h3>
+        <template>
+            <el-tabs v-model="activeName" @tab-click="handleLoad">
+                <el-tab-pane label="用户" name="1">
+                    <userInfo :key="timer1"></userInfo>
+                </el-tab-pane>
+                <el-tab-pane lazy label="数据导入" name="2" >
+                    <improtData :key="timer2"></improtData>
+                </el-tab-pane>
+                <el-tab-pane lazy label="数据分析" name="3">
+                    <analysisData :key="timer3"></analysisData>
+                </el-tab-pane>
+                <el-tab-pane lazy label="群" name="4">
+                    <group :key="timer4"></group>
+                </el-tab-pane>
+            </el-tabs>
+        </template>
+    </div>
+</template>
+<script>
+import userInfo from '../components/user.vue'
+import improtData from '../components/improtData.vue'
+import analysisData from '../components/analysisData.vue'
+import group from '../components/group.vue'
+export default {
+  data () {
+    return {
+        activeName: '1',
+        timer1:'',
+        timer2:'',
+        timer3:'',
+        timer4:''
+    }
+  },
+  methods: {
+    // handleClick (tab, event) {
+    //     console.log(tab, event)
+    // },
+    handleLoad (data) {
+        let name = data.name
+        if(name = 1){
+        this.timer1 = new Date().getTime()
+      }else if(name = 2){
+        this.timer2 = new Date().getTime()
+      }else if(name = 3){
+        this.timer3 = new Date().getTime()
+      }else if(name = 4){
+        this.timer4 = new Date().getTime()
+      }
+    }
+  },
+  components: {
+       userInfo: userInfo,
+       improtData:improtData,
+       analysisData:analysisData,
+       group:group
+  }
+}
+</script>
+<style lang="stylus" scoped>
+.box{
+    padding 10px
+}
+/deep/ .el-tabs__item{
+    width 100px;
+    text-align center
+}
+</style>

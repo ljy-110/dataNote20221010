@@ -1,0 +1,56 @@
+平时的开发中，我们需要连接其他电脑来跑项目的时候，就需要把ip地址换成需要连接电脑的ip地址。在config文件夹下的index.js的文件里面添加修改
+
+而我们平时也可以修改端口号8080来，跑多个vue项目
+
+dev: {
+    // Paths
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    proxyTable: {
+      '/api': {
+        target: 'http://192.168.101.153:9099',
+        changeOrigin:true,
+        // secure: false,  // 如果是https接口，需要配置这个参数
+        pathRewrite: {
+            '^/api': ''
+        }
+      }
+    },
+
+```js
+// Various Dev Server settings
+host: 'localhost', // can be overwritten by process.env.HOST
+port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+autoOpenBrowser: false,
+errorOverlay: true,
+notifyOnErrors: true,
+poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
+useEslint: true,
+showEslintErrorsInOverlay: false,
+
+/**
+ * Source Maps
+ */
+devtool: 'cheap-module-eval-source-map',
+cacheBusting: true,
+cssSourceMap: true
+```
+  },
+
+然后再到vue.config.js的文件里面修改添加target: url,
+ publicPath: process.env.NODE_ENV === "production" ? "" : "/",
+    devServer:{
+        open:true,
+        //proxy:"http://127.0.0.1:8088",
+        proxy: {
+            '/api': {
+                target: 'http://192.168.101.153:9099',
+                ws: true,
+                changeOrigin : true,
+                // secure: false,  // 如果是https接口，需要配置这个参数
+                pathRewrite: {
+                    '^/api': ''
+                }
+            }
+        }
+    }

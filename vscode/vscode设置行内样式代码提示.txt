@@ -1,0 +1,7 @@
+打开vscode设置，找到setting.json，然后加入下面这行代码
+
+    "files.associations": {
+        "*.vue": "html"
+      },
+
+但是缺点是图标会改变，eslint会失效，less语法会变红

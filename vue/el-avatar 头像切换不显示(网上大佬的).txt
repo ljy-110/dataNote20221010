@@ -1,0 +1,40 @@
+Element UI+Vue踩坑实录：<el-avatar>组件下头像切换不显示
+
+<el-avatar
+          class="marr5 comment-photo"
+          :size="30"
+          :src="common.imgPath + userInfo.picture"
+        >
+          <!-- 代码省略 -->
+          </el-avatar>
+使用做头像的时候后，发现切换后原有的头像都不显示了。头像不更新…数据更新之后，图片并没有更新，而且报了404的错，数据里有头像还好，一旦有一条数据头像为空，那么在此局部刷新的时候有头像数据的也不会显示了。简而言之就是：
+
+数据更新之后，DOM绑定的图片不会变
+经过多方查询，解决的办法：
+
+:key="common.imgPath + userInfo.picture"
+
+加上这一句之后，就能解决DOM的图片不变的问题。
+
+也就是说在 :src后面加上:key值，值就是你:src的值。”
+
+<el-avatar
+          class="marr5 comment-photo"
+          :size="30"
+          :src="common.imgPath + userInfo.picture"
+          :key="common.imgPath + userInfo.picture"
+        >
+    <!-- 代码省略 -->
+        </el-avatar>
+
+```js
+<div style="width:30%;" class="center">
+    <div class="demo-fit">
+      <div class="block">
+          <el-avatar :size="150" fit="fill" :src="url" :key="url"></el-avatar>//加key
+      </div>
+      <el-button size="mini" style="margin-top:20px;" class="center" @click="upImgDialog = true">上传头像</el-button>
+    </div>
+  </div>
+```
+

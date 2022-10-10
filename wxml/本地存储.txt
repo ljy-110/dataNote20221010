@@ -1,0 +1,35 @@
+二、本地储存 tips:本地数据存储的大小限制为 10MB
+
+每个微信小程序都可能用到本地缓存数据，这里我们可以通过调用微信提供的方法：wx.setStorage、wx.setStorageSync、wx.getStorage、wx.getStorageSync、wx.clearStorage、wx.clearStorageSync、实现对数据本地缓存、获取、清除。可参考微信小程序【数据缓存】开发文档，查看详情。
+
+在A界面获取数据并缓存到本地
+wx.setStorageSync('user_info', dic);
+
+
+在B界面获取数据并缓存到本地
+ var user_info = wx.getStorageSync("user_info")
+   this.setData({
+    username: user_info.username
+   });
+
+从本地缓存中同步移除指定 key。这里具体使用同步或是异步需要根据你存储时的方法，或是同步清理本地数据缓存wx.clearStorageSync()
+
+ wx.removeStorageSync("user_info")
+同理你可以在B界面传值在A界面取值，只不过这里你需要注意存储、获取的顺序，先存后取，否则你是拿不到值的
+
+三、全局的app对象
+
+这里你需要在app.js文件，写好你要全局使用的数据
+//用户数据
+    appData: {
+      user_info:null,
+    }
+在你需要赋值的地方引用app,代码如下：
+var app = getApp();
+    app.appData.user_info = {"username"："jane"};
+在你需要取值的地方引用app,代码如下：
+ var app = getApp();
+    var user_info = app.appData.user_info;
+    this.setData({
+      username: user_info.username
+    });

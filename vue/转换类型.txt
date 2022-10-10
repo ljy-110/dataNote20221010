@@ -1,0 +1,38 @@
+在开发中，我们需要对后端返回来的数据进行转型，后端返回的字符串类型，布尔类型，进行使用
+
+后端返回
+num:'12.598'
+num2:'11.222'
+这种字符串的数字，在前端需要根据这个数字来做一些判断的时候，直接
+if(num > num2){
+	console.log('方法')
+}
+这样子操作，很明显是不可以的，所以我们需要进行转换数据类型parseFloat浮点
+if(parseFloat（num） > parseFloat(num2){
+	console.log('方法')
+}
+
+
+
+//parseInt
+还有一种就是你想只想对比小数点前面的数字，就可以用到parseInt
+if(parseInt（num） > parseInt(num2){
+	console.log('方法')
+}
+
+
+//还有一种就是想让返回值变成一个整数的
+let num = 12.9666666
+this.num = Math.floor(num)
+返回值为12
+
+let num = 12.3*5
+this.num = Math.floor(num)
+返回值为61
+
+//截取小数点后两位，并且四舍五入
+let num = Number(num).toFixed(2)
+
+//截取小数点后两位，不四舍五入的
+let num = parseFloat(num*100)
+let num3 = num / 100

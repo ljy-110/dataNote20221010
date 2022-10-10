@@ -1,0 +1,31 @@
+
+
+list:[
+	id:'',
+	goods:[
+	images:'',
+	product:'',
+	desc:''
+]
+]
+
+<div class="listContent" v-for="item in list" :key="item.id">
+
+          <span>{{item.create_time_i | formatDate}}</span>
+
+	<div class=" van-hairline--top van-hairline--bottom order-cc" style="padding:10px 0" v-for="goods in item.goods" :key="goods.id">
+                            <van-image
+                                radius="5"
+                                width="50px"
+                                height="50px"
+                                :src="img+goods.image"
+                             />
+                            <div class="order-dd">
+                                <span class="van-ellipsis title">{{goods.product}}</span>
+                                <div class="order-dd-aa">
+                                    <div class="desc">{{goods.desc}}</div>
+                                </div>
+                            </div>
+                        </div>
+                            
+</div>
