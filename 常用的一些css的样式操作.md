@@ -60,8 +60,7 @@ width: 0;
 height: 0;
 border: 5px solid #transparent;
 border-top-color: red;
-<<<<<<< HEAD
-=======
+
 
 //实例
 <i class="triangle"></i>
@@ -76,7 +75,6 @@ border-top-color: red;
   left: 83px;
   bottom: -10px;
 }
->>>>>>> 8939307 (2022年10月10日2)
 ```
 
 4、flex布局
@@ -139,8 +137,6 @@ align-items: center;
 }
 ```
 
-<<<<<<< HEAD
-=======
 7、背景渐变色
 
 ```css
@@ -187,4 +183,3 @@ ul li:not(:last-child) {
 }
 ```
 
->>>>>>> 8939307 (2022年10月10日2)
