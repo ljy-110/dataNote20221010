@@ -67,3 +67,15 @@ this.$router.push({name:'operate', params:{id: '2'}})
 this.$router.push({path:'/operate', query:{id: '2'}})
 ```
 
+5、打开新窗口
+
+```js
+let pathInfo = this.$router.resolve({
+  path:'/product_detail',
+     query:{
+         productId:'11'
+     }
+ })
+ window.open(pathInfo.href, '_blank');
+```
+

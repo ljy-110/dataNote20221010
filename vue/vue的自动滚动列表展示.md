@@ -92,3 +92,38 @@ direction: 1, // 0向下 1向上 2向左 3向右
 ![10](E:\ljy\资料\img\10.gif)
 
 以上就是使用无缝滚动的一些基本效果，如果还行深入了解其他的效果，可以自行去官网查看，地址在上面。
+
+自动滚动列表点击事件失效解决办法
+
+在使用vue-seamless-scroll时候，想要点击某一列/行触发一个事件，发现，前几个可以，后面几个就不行了，不能点击的原因是因为**html元素是复制**出来的（滚动组件是将后面的复制出来一份，进行填铺页面，方便滚动）
+ 解决方案：往滚动组件的父节点上添加绑定事件（js冒泡机制），通过**e.target**定位到具体点击位置，然后判断点击位置是否是你滚动组件的一列/行
+
+```js
+<div class="lm-container-right-block" @click="itemClick($event)"> // 点击事件绑定到父节点上
+      <vue-seamless-scroll :data="list" class="seamless-warp">
+          <ul class="seamless-warp-items"> // 设置样式，方便定位
+            <li
+              v-for="(item, index) in list"
+              :key="item.id"
+              class="seamless-warp-item"
+              :data-index="index" :data-sectionid="item.sectionid" // 绑定index(或者直接放数据,JSON.stringify(item))
+            >
+              <take-capture />
+            </li>
+          </ul>
+        </vue-seamless-scroll>
+      </div>
+
+itemClick(e) {
+    e.target.dataset.sectionid
+    //sectionid  参数一定要小写，不然会拿不到
+    
+      //const item = e.target.closest(".seamless-warp-item"); // 定位元素
+      //if (item) { // 是否是滚动组件的某一行/列
+        //const { index } = item.dataset;
+        //this.info = this.list[index];  // 你想获取的数据
+        // 后续操作
+      }
+    }
+```
+

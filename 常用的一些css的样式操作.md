@@ -42,6 +42,20 @@ overflow: hidden;
   box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
   background-color: rgba(32, 34, 42, .5);
 }
+
+/* 火狐 */
+*{
+  scrollbar-color: rgba(89, 135, 164, .5) transparent; /* 第一个颜色为滚动条的颜色， 第二个颜色为滚动条轨道的颜色 */
+  scrollbar-width: thin; /* 设置比默认滚动条宽度更窄的宽度 */
+}
+  scrollbar-color: auto; /* 使用浏览器默认的滚动条样式 */
+  scrollbar-color: dark; /* 使用浏览器默认的深色或者黑色滚动效果 */
+  scrollbar-color: light; /* 使用浏览器默认的浅色滚动效果 */
+  scrollbar-color: red #00f; /* 第一个颜色为滚动条的颜色， 第二个颜色为滚动条轨道的颜色 */
+  scrollbar-width: auto; /* 使用浏览器默认的滚动宽度 */
+  scrollbar-width: thin; /* 设置比默认滚动条宽度更窄的宽度 */
+  scrollbar-width: none; /* 隐藏滚动条，但是元素还是可以滚动 */
+  scrollbar-width: 66px; /* 直接设置滚动条的宽度，比如 60px 3vh 4wh 5rem 6rm 等长度 */
 ```
 
 3、特殊的三角形状

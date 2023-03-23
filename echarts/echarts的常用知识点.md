@@ -140,3 +140,35 @@ axisLine:{
 interval: 1,
 ```
 
+11、去掉圆环图的放大效果
+
+```js
+hoverAnimation: false,
+```
+
+12、柱状图鼠标滚动缩放
+
+```js
+dataZoom: {
+          type: 'inside',
+        },
+```
+
+13、柱状图的背景色
+
+```js
+showBackground: true,
+            backgroundStyle: {
+              color: 'rgba(3, 134, 226, 0.2)'
+            },
+```
+
+14、图表缩放
+
+```js
+if (option && typeof option === 'object') {
+        myChart.setOption(option);
+      }
+      window.addEventListener('resize', myChart.resize);
+```
+
