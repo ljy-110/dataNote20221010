@@ -25,3 +25,17 @@
             </el-table-column>
 ```
 
+4、不能选择以后的时间
+
+```js
+<el-date-picker v-model="dialogForm.checkTime" type="date" placeholder="选择校核时间"
+              format="yyyy-MM-dd" value-format="yyyy-MM-dd" v-if="type=='edit'" :picker-options="pickerOptions">
+              </el-date-picker>
+
+pickerOptions: {
+        disabledDate(time) {
+          return time.getTime() > Date.now(); 
+        }
+      }
+```
+

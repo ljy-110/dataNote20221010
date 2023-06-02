@@ -117,3 +117,50 @@ let date = year + '-' + month2 + '-' + day2
 //2021-01-11
 ```
 
+js 获取当前日期所在季度
+
+```js
+可以使用 JavaScript 中的 Date 对象和 Math 对象来获取当前日期所在季度。
+
+具体实现方法如下：
+
+​```javascript
+// 获取当前月份
+var month = new Date().getMonth();
+
+// 获取当前季度
+var quarter = Math.floor(month / 3) + 1;
+
+console.log("当前季度为：" + quarter);
+​```
+
+其中，`new Date().getMonth()` 获取当前月份，由于季度是以3个月为一个周期，因此需要用 `Math.floor(month / 3)` 计算出当前是第几个季度，再加上 1 即为当前季度的编号。
+
+以上代码输出的结果，以 2023 年 4 月 23 日为例，输出的结果为：当前季度为：2。
+```
+
+js 获取当前日期是当前季度的第几个月
+
+```js
+可以使用 JavaScript 中的 Date 对象和 Math 对象来获取当前日期是当前季度的第几个月。
+
+具体实现方法如下：
+
+​```javascript
+// 获取当前月份
+var month = new Date().getMonth();
+
+// 获取当前季度的第一个月份
+var startMonth = (Math.floor(month / 3)) * 3;
+
+// 获取当前日期是当前季度的第几个月
+var currentQuarterMonth = month - startMonth + 1;
+
+console.log("当前季度的第" + currentQuarterMonth + "个月");
+​```
+
+其中，`new Date().getMonth()` 获取当前月份，由于季度是以 3 个月为一个周期，因此需要用 `Math.floor(month / 3)` 来计算当前是第几个季度的第一个月，再用当前月份减去第一个月份，再加 1 即为当前季度的第几个月。
+
+以上代码输出的结果，以 2023 年 4 月 23 日为例，输出的结果为：当前季度的第2个月。
+```
+
