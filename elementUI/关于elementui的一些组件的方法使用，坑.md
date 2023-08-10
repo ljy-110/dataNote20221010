@@ -39,3 +39,12 @@ pickerOptions: {
       }
 ```
 
+5、表单正则表达式验证
+
+```js
+grossWeight: [
+          { required: true, message: '请填写毛重', trigger: 'blur' },
+          { pattern: /^[0-9]+([.]{1}[0-9]{1,6})?$/, message: "请输入数字或者小数，例如：10,10.23", trigger: "blur", },
+        ],
+```
+
