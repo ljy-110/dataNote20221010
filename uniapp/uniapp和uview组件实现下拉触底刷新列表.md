@@ -1,4 +1,4 @@
-﻿下面是一个在UniApp中使用uView组件实现下拉触底刷新列表的示例，并使用Axios来请求分页数据列表：
+下面是一个在UniApp中使用uView组件实现下拉触底刷新列表的示例，并使用Axios来请求分页数据列表：
 
 1. 首先，确保你已经在UniApp项目中添加了uView组件库。你可以在项目根目录执行以下命令安装它们：
 ```
@@ -74,6 +74,7 @@ methods: {
       <ul v-for="(item, index) in list" :key="index">
         <li>{{ item.title }}</li>
       </ul>
+      <u-empty text="暂无数据" mode="list" v-if="list.length == 0"></u-empty>
     <u-loadmore :status="status" :icon-type="iconType" :load-text="loadText" />
   </view>
 </template>
@@ -86,12 +87,12 @@ methods: {
 ```js
 onReachBottom() {
 			let that = this;
-			if(this.tableData.length == this.total) return ;
+			if(this.list.length == this.total) return ;
 			this.status = 'loading';
 			this.page = ++ this.page;
 			setTimeout(() => {
 				that.loadData(); //请求的接口数据
-				if(this.tableData.length == this.total) this.status = 'nomore';
+				if(this.list.length == this.total) this.status = 'nomore';
 				else this.status = 'loading';
 			}, 2000)
 		},
