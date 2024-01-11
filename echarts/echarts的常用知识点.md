@@ -144,6 +144,11 @@ interval: 1,
 
 ```js
 hoverAnimation: false,
+    
+    //新版 5.4.0
+ emphasis:{
+              scale:false
+            },
 ```
 
 12、柱状图鼠标滚动缩放
