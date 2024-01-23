@@ -62,3 +62,20 @@ axisLabel: {
           },         
 ```
 
+六、[ECharts] DEPRECATED: itemStyle.emphasis has been changed to emphasis.itemStyle since 4.0
+
+
+
+七、[ECharts] DEPRECATED: labelLine.emphasis has been changed to emphasis.labelLine since 4.0
+
+```js
+labelLine: {
+  normal: {show: false},
+  emphasis: {show: false}
+},
+//改成
+labelLine: {
+ show: false
+},
+```
+
