@@ -7,19 +7,16 @@
 ```js
 NODE_ENV='dev';
 
-# VITE_APP_WEB_URL= 'http://192.168.4.225:8002/'
-VITE_APP_WEB_URL= 'http://139.159.188.171:8007'
-
-VITE_APP_BASE_API= '/zhgd-code'
+VITE_APP_WEB_URL= 'http://192.168.4.225:8002/'
+VITE_APP_BASE_API= '/code'
 ```
 
 `.env.production`
 
 ```js
 NODE_ENV='prod'
-​
-# VITE_APP_WEB_URL= 'http://192.168.4.225:8002/'
-VITE_APP_WEB_URL= 'http://139.159.188.171:8007'
-VITE_APP_BASE_API= '/zhgd-code'
+
+VITE_APP_WEB_URL= 'http://192.168.4.225:8002/'
+VITE_APP_BASE_API= '/code'
 ```
 
