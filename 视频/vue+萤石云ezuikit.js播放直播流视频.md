@@ -173,8 +173,18 @@ init(){
       accessToken:accessToken, //token
       width: 780,
       height: 360,
-      handleError: that.handleError(),
-      handleSuccess:  that.handleSuccess(),
+      //handleError: that.handleError(),
+      //handleSuccess:  that.handleSuccess(),
+        handleError: function(err) {
+                    console.log(err)
+                },
+                handleSuccess: function(e) {
+                    console.log(e)
+                },
+               //更新最新的8.0版本
+      handleCapturePicture:function(e) {
+                    console.log(e)
+                }
       //splitBasis:1, //旧版本3.5有个自带的分屏功能，现在没有了
       audio:0,
       themeData: themeData, //上面的对象内容
