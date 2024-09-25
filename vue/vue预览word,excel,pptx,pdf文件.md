@@ -41,7 +41,7 @@ window.open(officeUrl,'_target')
 
 百度网盘：链接: https://pan.baidu.com/s/1tdGrN3L-A9wkOIBzXjUWYw 提取码: pucv 
 
-![image-20210126142956794](E:\ljy\资料\img\typora-user-images\image-20210126142956794.png)
+![image-20210126142956794](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210126142956794.png)
 
 然后
 

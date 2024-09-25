@@ -4,7 +4,7 @@
 
 新加一个插件，vscode中vue的@click中的方法名跳转 `vue-helper`
 
-![2](E:\ljy\资料\img\2-16485456451431.gif)![image-20220329171950804](E:\ljy\资料\img\image-20220329171950804.png)
+![2](D:\LJY\code\dataNote20221010\img\2-16485456451431.gif)![image-20220329171950804](D:\LJY\code\dataNote20221010\img\image-20220329171950804.png)
 
 
 
@@ -14,7 +14,7 @@
 
 自动闭合html标签
 
-![image-20200831100412825](E:\ljy\资料\img\typora-user-images\image-20200831100412825.png)
+![image-20200831100412825](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20200831100412825.png)
 
 2.auto rename tag
 
@@ -32,7 +32,7 @@
 
 一键绑定即可快速更改大小写
 
-![image-20200831100759069](E:\ljy\资料\img\typora-user-images\image-20200831100759069.png)
+![image-20200831100759069](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20200831100759069.png)
 
 6.Chinese (Simplified) Language Pack for Visual Studio Code
 
@@ -78,7 +78,7 @@
 
 在装订线悬停时显示图像预览
 
-![image-20200831102756950](E:\ljy\资料\img\typora-user-images\image-20200831102756950.png)
+![image-20200831102756950](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20200831102756950.png)
 
 14.IntelliSense for CSS class names in HTML
 

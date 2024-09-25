@@ -1,6 +1,6 @@
 echarts 的纹理地图，叠层、高显区域、label图标展示
 
-![image-20230328112027300](E:\ljy\资料\img\image-20230328112027300.png)
+![image-20230328112027300](D:\LJY\code\dataNote20221010\img\image-20230328112027300.png)
 
 ```js
 initMap3DChina(chinaJson){

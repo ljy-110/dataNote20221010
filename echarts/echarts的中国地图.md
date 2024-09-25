@@ -4,7 +4,7 @@ Vue+ElementUI+Echarts的地图DOM
 
 示例图
 
-![image-20220826112349996](E:\ljy\资料\img\image-20220826112349996.png)
+![image-20220826112349996](D:\LJY\code\dataNote20221010\img\image-20220826112349996.png)
 
 从上图可以看到，这个主要是就是对地图做个一个展示，省份的高亮，各个板块的颜色修改的一些功能的DOM。
 

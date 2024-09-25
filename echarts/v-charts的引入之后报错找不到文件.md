@@ -20,11 +20,11 @@ new Vue({
 })
 ```
 
-![image-20210311172454974](E:\ljy\资料\img\typora-user-images\image-20210311172454974.png)
+![image-20210311172454974](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210311172454974.png)
 
 重新安装`npm install --save echarts/lib/visual/dataColor`失败
 
-![image-20210311172529066](E:\ljy\资料\img\typora-user-images\image-20210311172529066.png)
+![image-20210311172529066](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210311172529066.png)
 
 然后重新安装下其他的版本`npm i v-charts echarts@4.9.0 -S`
 
@@ -32,6 +32,6 @@ new Vue({
 npm i v-charts echarts@4.9.0 -S
 ```
 
-![image-20210311172653018](E:\ljy\资料\img\typora-user-images\image-20210311172653018.png)
+![image-20210311172653018](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210311172653018.png)
 
 然后就没有报错了

@@ -4,7 +4,7 @@
 
 在uniapp的目录里面找到`manifest.json`文件，找到源码视图，添加以下的代码
 
-![image-20230823095620445](E:\ljy\资料\img\image-20230823095620445.png)
+![image-20230823095620445](D:\LJY\code\dataNote20221010\img\image-20230823095620445.png)
 
 ```js
 "h5" : {
@@ -43,7 +43,7 @@
 
 然后就是，在处理接口的时候要注意了，因为我使用的是uview组件库自带的那个请求方式，所以在请求的拦截器那个添加这个，或者说在你们项目的地址配置那里进行配置
 
-![image-20230823095825737](E:\ljy\资料\img\image-20230823095825737.png)
+![image-20230823095825737](D:\LJY\code\dataNote20221010\img\image-20230823095825737.png)
 
 ```js
 process.env.NODE_ENV === 'development' ? '/api' : 'http://127.0.0.1:8080'

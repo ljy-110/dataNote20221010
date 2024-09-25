@@ -1,16 +1,16 @@
 vue+elementUI的管理后台实例
 
-![image-20211030161910067](E:\ljy\资料\img\image-20211030161910067.png)
+![image-20211030161910067](D:\LJY\code\dataNote20221010\img\image-20211030161910067.png)
 
 第一次写管理后台的时候我还不懂用elementui的组件，直到后面有人和我说才知道有这个一个组合型的组件然后弄成一个简单的管理后台的模板
 
 使用的是elementUI的`Container 布局容器`,`NavMenu 导航菜单`，使用了导航菜单的路由功能来实现点击切换的功能。
 
-![image-20211101091607828](E:\ljy\资料\img\image-20211101091607828.png)
+![image-20211101091607828](D:\LJY\code\dataNote20221010\img\image-20211101091607828.png)
 
 代码目录（代码文件连接：https://github.com/ljy-110/vue-manage）
 
-![image-20211101090929178](E:\ljy\资料\img\image-20211101090929178.png)
+![image-20211101090929178](D:\LJY\code\dataNote20221010\img\image-20211101090929178.png)
 
 一、布局的页面代码
 

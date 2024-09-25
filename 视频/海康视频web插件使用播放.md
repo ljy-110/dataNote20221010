@@ -6,17 +6,17 @@
 
 gitHub地址：https://github.com/ljy-110/video-plug
 
-![image-20240319163349310](E:\ljy\资料\img\image-20240319163349310.png)
+![image-20240319163349310](D:\LJY\code\dataNote20221010\img\image-20240319163349310.png)
 
 一、电脑安装插件。打开下载的文件包，找到`VideoWebPlugin.exe`文件进行安装
 
-![image-20240319164811810](E:\ljy\资料\img\image-20240319164811810.png)
+![image-20240319164811810](D:\LJY\code\dataNote20221010\img\image-20240319164811810.png)
 
 
 
 二、`index.html`引入视频`js`
 
-![image-20240319164933430](E:\ljy\资料\img\image-20240319164933430.png)
+![image-20240319164933430](D:\LJY\code\dataNote20221010\img\image-20240319164933430.png)
 
 三、开始实现视频预览
 
@@ -177,7 +177,7 @@ initLivePlayer(){
     },
 ```
 
-![image-20240319171717998](E:\ljy\资料\img\image-20240319171717998.png)
+![image-20240319171717998](D:\LJY\code\dataNote20221010\img\image-20240319171717998.png)
 
 3、播放视频
 
@@ -284,7 +284,7 @@ batchPlayVido(list){ //批量播放视频
     },
 ```
 
-![Snipaste_2024-03-19_16-21-51](E:\ljy\资料\img\Snipaste_2024-03-19_16-21-51.png)
+![Snipaste_2024-03-19_16-21-51](D:\LJY\code\dataNote20221010\img\Snipaste_2024-03-19_16-21-51.png)
 
 4、回放（点击从预览模式改成回放模式`playMode:0,//0-预览，1-回放`）
 
@@ -381,7 +381,7 @@ stopBackVideo(){
     }
 ```
 
-![image-20240319173011462](E:\ljy\资料\img\image-20240319173011462.png)
+![image-20240319173011462](D:\LJY\code\dataNote20221010\img\image-20240319173011462.png)
 
 四、关闭页面、切换路由、销毁视频关闭窗口
 

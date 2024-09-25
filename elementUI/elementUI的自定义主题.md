@@ -33,7 +33,7 @@ $--font-path: '../node_modules/element-ui/lib/theme-chalk/fonts';
 @import "../node_modules/element-ui/packages/theme-chalk/src/index";
 ```
 
-![image-20211116171033812](E:\ljy\资料\img\image-20211116171033812.png)
+![image-20211116171033812](D:\LJY\code\dataNote20221010\img\image-20211116171033812.png)
 
 #### 三、在项目的入口文件中，直接引入以上样式文件即可（无需引入 Element 编译好的 CSS 文件）：
 
@@ -45,7 +45,7 @@ import './element-variables.scss'
 Vue.use(Element)
 ```
 
-![image-20211116171049411](E:\ljy\资料\img\image-20211116171049411.png)
+![image-20211116171049411](D:\LJY\code\dataNote20221010\img\image-20211116171049411.png)
 
 这样基本就可以做到自定义主题修改颜色了
 
@@ -75,5 +75,5 @@ $--color-info: #909399 !default;
 
 也可以使用自定义主题，自定义主题使用了在线主题编辑工具或者命令行工具进行生成自己想要的主题css文件，然后再项目种进行引入
 
-![image-20211116172702918](E:\ljy\资料\img\image-20211116172702918.png)
+![image-20211116172702918](D:\LJY\code\dataNote20221010\img\image-20211116172702918.png)
 

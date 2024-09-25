@@ -5,7 +5,7 @@ css实现水波图
 - 利用 border-radius 生成椭圆
 - 并不是利用旋转的椭圆本身生成波浪效果，而是利用它去切割背景，产生波浪的效果。
 
-![image-20220922100621762](E:\ljy\资料\img\image-20220922100621762.png)
+![image-20220922100621762](D:\LJY\code\dataNote20221010\img\image-20220922100621762.png)
 
 ```html
 <div class="container">

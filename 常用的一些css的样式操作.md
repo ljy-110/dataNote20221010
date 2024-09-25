@@ -197,3 +197,6 @@ ul li:not(:last-child) {
 }
 ```
 
+盒子内发光
+box-shadow: inset 0 0 10px 5px red;
+

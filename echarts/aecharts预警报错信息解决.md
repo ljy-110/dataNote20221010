@@ -2,7 +2,7 @@
 
 [ECharts] DEPRECATED: 'normal' hierarchy in itemStyle has been removed since 4.0. All style properties are configured in itemStyle directly now.
 
-![image-20231212111700541](E:\ljy\资料\img\image-20231212111700541.png)
+![image-20231212111700541](D:\LJY\code\dataNote20221010\img\image-20231212111700541.png)
 
 因为normal层被移除，问题代码如下图所示
 

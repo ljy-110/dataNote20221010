@@ -8,13 +8,13 @@
 
 网盘地址：https://pan.baidu.com/s/12E7d46XLVxGOmTDevVB58g?pwd=ntfm
 
-![image-20230817091420701](E:\ljy\资料\img\image-20230817091420701.png)
+![image-20230817091420701](D:\LJY\code\dataNote20221010\img\image-20230817091420701.png)
 
 1、安装之前先卸载电脑原来的node版本，然后使用安装包进行安装
 
 安装流程可以看看官网，就是安装位置等等
 
-![image-20230817091846289](E:\ljy\资料\img\image-20230817091846289.png)
+![image-20230817091846289](D:\LJY\code\dataNote20221010\img\image-20230817091846289.png)
 
 这样是安装成功
 
@@ -32,7 +32,7 @@ nvm npm_mirror https://npmmirror.com/mirrors/npm/
 nvm node_mirror https://npmmirror.com/mirrors/node/
 ```
 
-![image-20230817092344942](E:\ljy\资料\img\image-20230817092344942.png)
+![image-20230817092344942](D:\LJY\code\dataNote20221010\img\image-20230817092344942.png)
 
 3、安装不同版本的node
 
@@ -50,7 +50,7 @@ nvm ls
 nvm use 16.14.2
 ```
 
-![image-20230817094215365](E:\ljy\资料\img\image-20230817094215365.png)
+![image-20230817094215365](D:\LJY\code\dataNote20221010\img\image-20230817094215365.png)
 
 
 

@@ -17,7 +17,7 @@ async reafXls(){
 <<<<<<< HEAD
 ![image-20200922141213325](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200922141213325.png)
 =======
-![image-20200922141213325](E:\ljy\资料\img\typora-user-images\image-20200922141213325.png)
+![image-20200922141213325](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20200922141213325.png)
 >>>>>>> 8939307 (2022年10月10日2)
 
 下面试区分开一个表格的表头，一个单元格数据
@@ -27,7 +27,7 @@ async reafXls(){
 <<<<<<< HEAD
 ![image-20200922141352178](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200922141352178.png)
 =======
-![image-20200922141352178](E:\ljy\资料\img\typora-user-images\image-20200922141352178.png)
+![image-20200922141352178](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20200922141352178.png)
 >>>>>>> 8939307 (2022年10月10日2)
 
 然后就是在页面显示出来
@@ -63,5 +63,5 @@ async reafXls(){
 <<<<<<< HEAD
 ![image-20200922141950586](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200922141950586.png)
 =======
-![image-20200922141950586](E:\ljy\资料\img\typora-user-images\image-20200922141950586.png)
+![image-20200922141950586](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20200922141950586.png)
 >>>>>>> 8939307 (2022年10月10日2)

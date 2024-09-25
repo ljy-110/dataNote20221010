@@ -150,5 +150,5 @@ Vue.use(requireComponents)
 
 官网的例子：
 
-![image-20220708160736952](E:\ljy\资料\img\image-20220708160736952.png)
+![image-20220708160736952](D:\LJY\code\dataNote20221010\img\image-20220708160736952.png)
 

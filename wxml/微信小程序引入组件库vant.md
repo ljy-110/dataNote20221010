@@ -2,7 +2,7 @@
 
 微信开发者工具最新版本
 
-![image-20230726085319565](E:\ljy\资料\img\image-20230726085319565.png)
+![image-20230726085319565](D:\LJY\code\dataNote20221010\img\image-20230726085319565.png)
 
 
 
@@ -21,21 +21,21 @@ osType: win32-x64
 time: 2023-07-26 08:56:18
 ```
 
-![image-20230726085616456](E:\ljy\资料\img\image-20230726085616456.png)
+![image-20230726085616456](D:\LJY\code\dataNote20221010\img\image-20230726085616456.png)
 
 这个错误提示就是我们缺少了配置，所以要先进行初始化`npm init -y`。在目录的空白处右键-->选择在外部终端窗口打开，输入命令，然后就发现文件目录多了一个文件`package.json`
 
-![image-20230726090322312](E:\ljy\资料\img\image-20230726090322312.png)
+![image-20230726090322312](D:\LJY\code\dataNote20221010\img\image-20230726090322312.png)
 
-![image-20230726090100936](E:\ljy\资料\img\image-20230726090100936.png)
+![image-20230726090100936](D:\LJY\code\dataNote20221010\img\image-20230726090100936.png)
 
 然后这个时候再去构建npm，发现还是报上面的错误，大概率是没有安装组件库，所以我们先在终端进行安装vant，`npm i @vant/weapp -S --production`
 
-![image-20230726090616560](E:\ljy\资料\img\image-20230726090616560.png)
+![image-20230726090616560](D:\LJY\code\dataNote20221010\img\image-20230726090616560.png)
 
 再去构建npm，就可以发现成功了
 
-![image-20230726090646976](E:\ljy\资料\img\image-20230726090646976.png)
+![image-20230726090646976](D:\LJY\code\dataNote20221010\img\image-20230726090646976.png)
 
 然后下面就是按照vant的小程序版进行配置
 
@@ -62,7 +62,7 @@ time: 2023-07-26 08:56:18
  "miniprogramNpmDistDir": "./"
 ```
 
-![image-20230726091203043](E:\ljy\资料\img\image-20230726091203043.png)
+![image-20230726091203043](D:\LJY\code\dataNote20221010\img\image-20230726091203043.png)
 
 在`app.json`，引入需要使用的组件
 
@@ -72,5 +72,5 @@ time: 2023-07-26 08:56:18
 }
 ```
 
-![image-20230726091349104](E:\ljy\资料\img\image-20230726091349104.png)
+![image-20230726091349104](D:\LJY\code\dataNote20221010\img\image-20230726091349104.png)
 

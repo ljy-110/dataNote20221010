@@ -22,7 +22,7 @@ option = {
 };
 ```
 
-![image-20240201150205322](E:\ljy\资料\img\image-20240201150205322.png)
+![image-20240201150205322](D:\LJY\code\dataNote20221010\img\image-20240201150205322.png)
 
 1、平滑曲线
 

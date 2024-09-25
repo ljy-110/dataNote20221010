@@ -1,6 +1,6 @@
 进度条饼图的使用
 
-![image-20230328164950479](E:\ljy\资料\img\image-20230328164950479.png)
+![image-20230328164950479](D:\LJY\code\dataNote20221010\img\image-20230328164950479.png)
 
 ```js
 let value = 60;

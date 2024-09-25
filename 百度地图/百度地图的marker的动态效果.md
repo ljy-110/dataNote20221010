@@ -57,11 +57,11 @@ that.markerList[index].setIcon(icon);
 
 修改label的div来进行添加动态效果，如图我们发现地图渲染的盒子的class名称来进行操做
 
-![image-20211111142335461](E:\ljy\资料\img\image-20211111142335461.png)
+![image-20211111142335461](D:\LJY\code\dataNote20221010\img\image-20211111142335461.png)
 
 然后在我们获取到的marker的列表数据里面可以看到，是可以拿到该标注点的className
 
-![image-20211111142756390](E:\ljy\资料\img\image-20211111142756390.png)
+![image-20211111142756390](D:\LJY\code\dataNote20221010\img\image-20211111142756390.png)
 
 然后我们就可以给这个盒子添加一个class动态样式，然后给这个盒子添加动态效果，所以
 
@@ -89,9 +89,9 @@ that.markerList[index].domElement.className = item.domElement.className + ' mapB
 
 可以看到，已经成功添加了这个class，也可以实现到给某个标注点添加动态效果
 
-![image-20211111142638278](E:\ljy\资料\img\image-20211111142638278.png)
+![image-20211111142638278](D:\LJY\code\dataNote20221010\img\image-20211111142638278.png)
 
-![8](E:\ljy\资料\img\8.gif)
+![8](D:\LJY\code\dataNote20221010\img\8.gif)
 
 修改label的样式
 

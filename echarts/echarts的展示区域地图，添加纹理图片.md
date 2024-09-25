@@ -2,17 +2,17 @@ echarts的展示区域地图，添加纹理图片
 
 下面我们以广西南宁的来做实例，来进行这个渲染和添加纹理图片的操作。
 
-![image-20230328101229146](E:\ljy\资料\img\image-20230328101229146.png)
+![image-20230328101229146](D:\LJY\code\dataNote20221010\img\image-20230328101229146.png)
 
 首先我们先看看文档，echarts 的geo的areaColor是可以支持通过图片来对地图的区域内容来进行纹理填充的，也可以进行颜色的修改。
 
 文档的具体位置：https://echarts.apache.org/zh/option.html#color
 
-![image-20230328101702641](E:\ljy\资料\img\image-20230328101702641.png)
+![image-20230328101702641](D:\LJY\code\dataNote20221010\img\image-20230328101702641.png)
 
 但是这个纹理图片的填充是*支持为 HTMLImageElement, HTMLCanvasElement，不支持路径字符串，所以我们需要新构建一个图片内容。
 
-![image-20230328101842432](E:\ljy\资料\img\image-20230328101842432.png)
+![image-20230328101842432](D:\LJY\code\dataNote20221010\img\image-20230328101842432.png)
 
 展示图片我们可以使用下面两者方法来进行，当然方法很多，也可以使用其他的方法，这里就不一一列举了
 
@@ -223,4 +223,4 @@ tip
 
 最后贴一张纹理图片，大家也可以自己去截取。卫星地图方法去截取。
 
-![2](E:\ljy\资料\img\2.jpg)
+![2](D:\LJY\code\dataNote20221010\img\2.jpg)

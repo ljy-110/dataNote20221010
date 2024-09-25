@@ -1,6 +1,6 @@
 固定的横向
 
-![bar-y-category](E:\ljy\资料\img\bar-y-category.png)
+![bar-y-category](D:\LJY\code\dataNote20221010\img\bar-y-category.png)
 
 ```js
 option = {
@@ -184,7 +184,7 @@ option = {
 
 不固定的
 
-![image-20230106142135979](E:\ljy\资料\img\image-20230106142135979.png)
+![image-20230106142135979](D:\LJY\code\dataNote20221010\img\image-20230106142135979.png)
 
 ```js
 option = {

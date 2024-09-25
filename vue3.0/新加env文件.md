@@ -1,6 +1,6 @@
 新加env文件
 
-![image-20240221151927759](E:\ljy\资料\img\image-20240221151927759.png)
+![image-20240221151927759](D:\LJY\code\dataNote20221010\img\image-20240221151927759.png)
 
 \`.env.development`
 

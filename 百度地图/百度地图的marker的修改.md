@@ -16,7 +16,7 @@ this.markerList.push(marker)
 
 2、了解百度地图的JSAPI的一些用法，比如怎么获取标注点的图像对象，获取label的文本内容等等的方法，具体可以参考官网：https://lbsyun.baidu.com/cms/jsapi/reference/jsapi_webgl_1_0.html#a3b2
 
-![image-20211111094323639](E:\ljy\资料\img\image-20211111094323639.png)
+![image-20211111094323639](D:\LJY\code\dataNote20221010\img\image-20211111094323639.png)
 
 从上面可以看到，我们可以通过`this.getLabel()`获取label的对象，然后进行操控。通过`this.setIcon(icon)`来修改marker的icon
 

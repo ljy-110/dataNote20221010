@@ -63,7 +63,7 @@ type: 'scroll',  //legend要多，进行分页处理
 orient: 'vertical',
 ```
 
-![image-20211116141107113](E:\ljy\资料\img\image-20211116141107113.png)
+![image-20211116141107113](D:\LJY\code\dataNote20221010\img\image-20211116141107113.png)
 
 如果需要修改下分页效果下面的文字和分页箭头的样式颜色可以通过`pageIconColor`，属性来进行修改
 

@@ -38,7 +38,7 @@ components: {
 
 效果基本如下
 
-![9](E:\ljy\资料\img\9.gif)
+![9](D:\LJY\code\dataNote20221010\img\9.gif)
 
 ```html
 <vue-seamless-scroll :data="alarmListData"
@@ -89,7 +89,7 @@ direction: 1, // 0向下 1向上 2向左 3向右
 
 效果基本如下
 
-![10](E:\ljy\资料\img\10.gif)
+![10](D:\LJY\code\dataNote20221010\img\10.gif)
 
 以上就是使用无缝滚动的一些基本效果，如果还行深入了解其他的效果，可以自行去官网查看，地址在上面。
 

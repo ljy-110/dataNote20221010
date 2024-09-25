@@ -12,9 +12,9 @@ Element，一套为开发者、设计师和产品经理准备的基于 `Vue 2.0 
 
 官方文档：https://element.eleme.cn/#/zh-CN/component/installation
 
-![image-20210607113824865](E:\ljy\资料\img\typora-user-images\image-20210607113824865.png)
+![image-20210607113824865](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210607113824865.png)
 
-![image-20210607114039228](E:\ljy\资料\img\typora-user-images\image-20210607114039228.png)
+![image-20210607114039228](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210607114039228.png)
 
 ​	2、`BootstrapVue`
 
@@ -24,7 +24,7 @@ Element，一套为开发者、设计师和产品经理准备的基于 `Vue 2.0 
 
 官方文档：https://code.z01.com/bootstrap-vue/
 
-![image-20210607114532669](E:\ljy\资料\img\typora-user-images\image-20210607114532669.png)
+![image-20210607114532669](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210607114532669.png)
 
 二、移动端
 
@@ -45,7 +45,7 @@ Vant 是**有赞前端团队**开源的移动端组件库，于 2017 年开源�
 
 官方文档：https://youzan.github.io/vant/#/zh-CN/home
 
-![image-20210607114759834](E:\ljy\资料\img\typora-user-images\image-20210607114759834.png)
+![image-20210607114759834](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210607114759834.png)
 
    2、`Vux`
 
@@ -55,7 +55,7 @@ Vant 是**有赞前端团队**开源的移动端组件库，于 2017 年开源�
 
 官方文档：https://doc.vux.li/zh-CN/about/before-using-vux.html
 
-![image-20210607115548736](E:\ljy\资料\img\typora-user-images\image-20210607115548736.png)
+![image-20210607115548736](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210607115548736.png)
 
 三、微信小程序
 
@@ -65,7 +65,7 @@ Vant 是**有赞前端团队**开源的移动端组件库，于 2017 年开源�
 
 官方文档：https://developers.weixin.qq.com/miniprogram/dev/extended/weui/
 
-![image-20210607115923719](E:\ljy\资料\img\typora-user-images\image-20210607115923719.png)
+![image-20210607115923719](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210607115923719.png)
 
 2、`Vant Weapp`
 
@@ -73,10 +73,10 @@ Vant 是**有赞前端团队**开源的移动端组件库，于 2016 年开源�
 
 官方文档：https://youzan.github.io/vant-weapp/#/home
 
-![image-20210607120046459](E:\ljy\资料\img\typora-user-images\image-20210607120046459.png)
+![image-20210607120046459](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210607120046459.png)
 
 3、`iview-weapp`
 
 官方文档：https://weapp.iviewui.com/docs/guide/start
 
-![image-20210607124601259](E:\ljy\资料\img\typora-user-images\image-20210607124601259.png)
+![image-20210607124601259](D:\LJY\code\dataNote20221010\img\typora-user-images\image-20210607124601259.png)
