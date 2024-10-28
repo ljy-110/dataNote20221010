@@ -42,9 +42,10 @@ orient: 'vertical',
 3、x轴的刻度标签间隔的控制。图表本身如果数据太多了的话，间隔会自动打开的，但是有时候是不能符合我们自己项目要求的，所以就需要自己去配置，就要使用到了`interval`。我的设置是针对时间的来进行做展示刻度标签的
 
 ```js
+minInterval:1,
 axisLabel: {
    show: true,
-   interval:23,//刻度之间的间距设置
+   interval:'aoto',//刻度之间的间距设置
 },
 ```
 
