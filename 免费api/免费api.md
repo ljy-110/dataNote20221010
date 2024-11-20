@@ -1,7 +1,5 @@
 免费api
 
-更新~~~~~~~~~~~~~~~~~~~~~~~
-
 ```js
 https://game.gtimg.cn;
 https://tools.mgtv100.com;

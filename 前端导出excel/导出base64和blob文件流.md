@@ -68,3 +68,17 @@ filesDownload(url){
    window.open(apiUrl)
 
   },
+
+
+
+下载
+
+```js
+const url = window.URL.createObjectURL(new Blob([res.data], { type: 'application/vnd.ms-excel,charset=utf-8' }));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'excel.xlsx');
+            document.body.appendChild(link);
+            link.click();
+```
+
