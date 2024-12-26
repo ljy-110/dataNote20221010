@@ -152,6 +152,45 @@ closeViewer() {
 },
 ```
 
+四、txt文件预览
+
+```js
+<div v-else-if="['.txt'].includes(type)" class="box-flex">
+  <pre>{{ textContent }}</pre>
+</div>
+```
+
+js
+
+```js
+readerTxt(url) {
+      let that = this
+      axios.get(url, {
+        responseType: "blob",
+        transformResponse: [
+          async function (data) {
+            return await that.transformData(data);
+          },
+        ],
+      }).then(res => {
+        res.data.then((data) => {
+          that.textContent = data;
+        })
+      })
+    },
+    transformData(data) {
+      return new Promise((resolve) => {
+        let reader = new FileReader();
+        reader.readAsText(data, 'UTF-8');
+        reader.onload = () => {
+          resolve(reader.result)
+        }
+      })
+    }
+```
+
+
+
 最后可以把这些内容合并成一个常用的附件预览的组件
 
 ```js
@@ -266,7 +305,10 @@ export default {
         url = "https://pan.suyanw.cn/down.php/4935b1dc61233c907e26eb523f8e778a.txt"
       } else if(type == '.mp3'){
         url = 'https://api.zxz.ee/api/zdbs/m/15.MP3'
-      }
+      } else if(type == '.txt'){
+        url = 'http://10.3.1.171:7878/123.txt'
+          this.readerTxt(url)
+      } 
       this.type = type;
       this.fileUrl = url;
       this.dialogVisible = true;
@@ -282,6 +324,30 @@ export default {
       this.fileUrl = '';
       this.dialogVisible = false;
     },
+      readerTxt(url) {
+      let that = this
+      axios.get(url, {
+        responseType: "blob",
+        transformResponse: [
+          async function (data) {
+            return await that.transformData(data);
+          },
+        ],
+      }).then(res => {
+        res.data.then((data) => {
+          that.textContent = data;
+        })
+      })
+    },
+    transformData(data) {
+      return new Promise((resolve) => {
+        let reader = new FileReader();
+        reader.readAsText(data, 'UTF-8');
+        reader.onload = () => {
+          resolve(reader.result)
+        }
+      })
+    }
   },
 }
 
