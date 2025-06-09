@@ -17,7 +17,7 @@ git cherry-pick 'Commit'
 
 //比如
 git cherry-pick b8bba887837bd83a88d184d68dbf7a9c08ac0507
-
+git push
 //最后输入(取决于当前没有其他的提交和冲突，如果有的话，先处理)
 git add .
 ```
